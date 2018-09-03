@@ -1,0 +1,18 @@
+version: "3"
+services:
+  http-websocket:
+    image: gailo22/http-websocket
+    networks:
+      default:
+        ipv4_address:  172.10.0.55
+
+  spring-websocket:
+    image: gailo22/spring-websocket
+    networks:
+      default:
+        ipv4_address:  172.10.0.56
+
+networks:
+  default:
+    external:
+      name: websocket-net
